@@ -10,29 +10,30 @@ def area_of_circle(radius):
 def hollow_right_triangle(n):
     total_shape = ""
 
-    for row_number in range(1, n + 1):
-        if n < 4:
-            return "The triangle height should be at least 4."
-        else:
+    if n < 4:
+         return "The triangle height should be at least 4."
+
+    else:
+        for row_number in range(1, n + 1):
             total_shape += "*"
 
-        for space_index in range(1, row_number - 1):
-            if row_number != n: 
-                total_shape += " "
+            for space_index in range(1, row_number - 1):
+                if row_number != n: 
+                    total_shape += " "
             
-        if row_number == 1 or row_number == n:
-            total_shape += ""    
-        else: 
-            total_shape += "*"
+            if row_number == 1 or row_number == n:
+                total_shape += ""    
+            else: 
+                total_shape += "*"
 
-        if row_number == n:
-            total_shape += "*" * (n - 1)
-        else:
-            total_shape += ""  
+            if row_number == n:
+                total_shape += "*" * (n - 1)
+            else:
+                total_shape += ""  
 
-        total_shape += "\n"
+            total_shape += "\n"
         
-    return total_shape.rstrip()
+        return total_shape.rstrip()
 
             
 
@@ -40,11 +41,11 @@ def hollow_right_triangle(n):
 def inverted_pyramid(n):
     total_shape = ""
 
-    for row_number in range(1, n + 1):
-        if n < 3:
-            return "The pyramid height should be at least 3."
-
-        else:
+    if n < 3:
+        return "The pyramid height should be at least 3."
+       
+    else:
+        for row_number in range(1, n + 1):
             for space_index in range(1, row_number):
                 total_shape += " "
 
@@ -53,7 +54,7 @@ def inverted_pyramid(n):
            
             total_shape += "\n"
    
-    return total_shape.rstrip()
+        return total_shape.rstrip()
  
 
 
@@ -72,7 +73,7 @@ print()
 print(hollow_right_triangle(5))
 print()
 
-print(inverted_pyramid(3))
+print(inverted_pyramid(2))
 print()
 
 print(inverted_pyramid(4))
