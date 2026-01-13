@@ -16,7 +16,7 @@ def hollow_right_triangle(n):
         else:
             total_shape += "*"
 
-        for space_number in range(1, row_number - 1):
+        for space_index in range(1, row_number - 1):
             if row_number != n: 
                 total_shape += " "
             
@@ -45,7 +45,7 @@ def inverted_pyramid(n):
             return "The pyramid height should be at least 3."
 
         else:
-            for space_number in range(1, row_number):
+            for space_index in range(1, row_number):
                 total_shape += " "
 
             for star_index in range(1,  2 * n - 2 * row_number + 2):
